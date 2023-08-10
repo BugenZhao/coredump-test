@@ -8,3 +8,11 @@ edition = "2021"
 [dependencies]
 rand = "0.8"
 libc = "0.2"
+
+[profile.dev-lt]
+inherits = "dev"
+debug = "line-tables-only" # no module names or variables in core dump
+
+[profile.dev-limited]
+inherits = "dev"
+debug = "limited" # no variables in core dump
