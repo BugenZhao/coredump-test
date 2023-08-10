@@ -7,7 +7,7 @@
         {
             "type": "lldb",
             "request": "custom",
-            "name": "Custom launch",
+            "name": "Open core dump",
             "targetCreateCommands": [
                 "target create ${workspaceFolder}/target/debug/coredump-test --core ${input:coreFileName}"
             ],

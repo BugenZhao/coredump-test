@@ -1,7 +1,11 @@
 ```
 /usr/libexec/PlistBuddy -c "Add :com.apple.security.get-task-allow bool true" tmp.entitlements
 codesign -s - -f --entitlements tmp.entitlements target/debug/coredump-test
+
+target/debug/coredump-test
 ```
+
+Then find `core.<pid>` under `/cores` and run "Open core dump" in VSCode.
 
 # References
 
