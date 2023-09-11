@@ -9,6 +9,9 @@ edition = "2021"
 rand = "0.8"
 libc = "0.2"
 
+[profile.dev]
+split-debuginfo = "packed"
+
 [profile.dev-lt]
 inherits = "dev"
 debug = "line-tables-only" # no module names or variables in core dump
