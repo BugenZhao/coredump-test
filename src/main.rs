@@ -1,5 +1,6 @@
 use libc::rlimit;
 
+#[inline(never)]
 fn test(i: i32) {
     let a = i * 2;
     if a > 10 {
