@@ -31,6 +31,8 @@ fn enable_core_dumps() {
 }
 
 fn main() {
+    std::env::set_var("RUST_BACKTRACE", "1");
+
     enable_core_dumps();
 
     let default_panic = std::panic::take_hook();
